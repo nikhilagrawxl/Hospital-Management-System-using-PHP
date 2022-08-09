@@ -1,0 +1,74 @@
+
+<!-- saved from url=(0070)file:///D:/xampp/htdocs/HospitalManagementSystem-gh-pages/welcome.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="file:///D:/xampp/htdocs/HospitalManagementSystem-gh-pages/style.css">
+    <title>Login</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+  function validateform()
+  {
+  var x=document.forms["myform"]["email"].value
+  var atpos=x.indexOf("@");
+  var dotpos=x.lastIndexOf(".");
+  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+    {
+    document.getElementById('errorMsg').style.display = 'block';
+    return false;
+    }
+  }
+  </script>
+  <h1 style="font-family:verdana; font-size:400%; text-align:center; color:2F4F4F">LOGIN</h1>
+    <div id="main" align="center">
+      <div id="login" align="center">
+        <form name="myform" method="post" action="http://localhost/HospitalManagementSystem-gh-pages/index.php" onsubmit="return validateform()">
+          <p>
+          <img src="log.png" alt="Italian Trulli">
+            <br>
+            <br>
+            </p><h1 style="font-family:verdana; font-size:200%; text-align:center; color:2F4F4F">Email:</h1> <input type="text" name="email"><br><br>
+	    <input type="submit" value="Enter">
+	    <div id="errorMsg" style="display: none;">Not valid email</div>
+          <p></p>
+          <span style="color:red;"><!--?php echo $errorMessage; ?--></span>
+        </form>
+      </div>
+  
+  <style>
+body {color: black;background: #B24592;  background: -webkit-linear-gradient(to right, #F15F79, #B24592);  background: linear-gradient(to right, #F15F79, #B24592); }
+
+margin: 0;
+    font-family: 'Source Sans Pro';
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;}
+
+  #main{
+    text-align: center;
+  }
+  #login{
+    background-color: white;
+    padding:20px;
+    border-radius: 8px;
+    width:95%;
+    margin-left: 0%;
+    min-height: 90vh;
+  }
+  label{
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  p{
+    border-radius: 7px;
+    padding:10px;
+  }
+  input[type=text], input[type=password]{
+    text-align: center;
+    padding:5px;
+    border-radius: 3px;
+  }
+  </style>
+</div></body></html>
